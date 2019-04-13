@@ -1,0 +1,21 @@
+<!--Main layout-->
+<main id="mainContainer" class="address">
+  <div class="container">
+    <div class="row">
+
+      <!-- Sidebar -->
+      <div class="col-lg-12 col-md-12">
+
+        <app-atomic-input [label]="vorname" (getInput)="onGetInputVorname($event)" (isValid)="onIsVornameValid($event)"></app-atomic-input>
+
+        <h3>{{ inputVornameFromAddressComponent }}</h3>
+
+        <app-atomic-input [label]="nachname" (getInput)="onGetInputNachname($event)" (isValid)="onIsNachnameValid($event)"></app-atomic-input>
+                
+        <h3>{{ inputNachnameFromAddressComponent }}</h3>
+      
+      </div>
+    </div>
+  </div>
+
+</main>

@@ -1,0 +1,19 @@
+<p>
+  atomic component!
+</p>
+
+<app-atomic-input [label]="name" (getInput)="onGetInput($event)"></app-atomic-input>
+<h3>{{ inputFromAddressComponent }}</h3>
+
+<p>
+  aggregate component!
+</p>
+
+<mat-radio-group aria-label="Select an option" [(ngModel)]="selectedOption">
+  <mat-radio-button value="1">Option 1</mat-radio-button>
+  <mat-radio-button value="2">Option 2</mat-radio-button>
+</mat-radio-group>
+
+<app-address *ngIf="selectedOption === '2'" (isValid)="onIsAddressValid($event)"></app-address>
+
+<h3>Address component is valid: {{ isAddressValid}} </h3>

@@ -1,0 +1,7 @@
+<form [formGroup]="atomicFormGroup" class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>{{ label }}</mat-label>
+    <input matInput placeholder="Pleace input" formControlName="atomicInputCtrl" (change)=onChanges() required>
+    <mat-error *ngIf="atomicFormGroup.controls.atomicInputCtrl.invalid">{{ getInputErrorMessage() }}</mat-error>
+  </mat-form-field>
+</form>
